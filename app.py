@@ -2,25 +2,42 @@ import streamlit as st
 import requests
 from PIL import Image
 
+
 API_URL = "https://fastapi-1sb8.onrender.com/predict"
 
 
-image_path = "Image/A11789B1-928B-4E79-A7FA-40D6FE317615.jpg"
+image_path = "/Users/mohd_rifat/Desktop/A11789B1-928B-4E79-A7FA-40D6FE317615.jpg"
 image = Image.open(image_path)  # Replace with your image path
 
-resized_image = image.resize((120, 120))  # 300px wide, 200px high
+resized_image = image.resize((120, 120))
 
 
-col1, col2, col3 = st.columns([2, 2, 2])  # three columns: left, center, right
+# Center the card using columns
+col1, col2, col3 = st.columns([0.01, 1, 1])
 
-with col1:
-    st.write("")  # empty space on the left
+with col2:  # middle column
+    st.image(resized_image, caption="Md Refat Hosain")  # profile image
 
-with col2:
-    st.image(resized_image, caption="Md Refat Hosain")  # image in the middle
-
-with col3:
-    st.write("")  # empty space on the right
+    # Buttons below image & name
+    st.markdown(
+        """
+        <div style="text-align: left;">
+            <a href="https://github.com/Md-Refat-Hosain" target="_blank">
+                <button style="padding:10px 20px; margin:5px; border-radius:10px; 
+                               background:#24292e; color:white; border:none; cursor:pointer;">
+                    GitHub
+                </button>
+            </a>
+            <a href="https://www.linkedin.com/in/your-profile/" target="_blank">
+                <button style="padding:10px 20px; margin:5px; border-radius:10px; 
+                               background:#0077B5; color:white; border:none; cursor:pointer;">
+                    LinkedIn
+                </button>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 continuous_cols = ["tenure", "monthlycharges"]
