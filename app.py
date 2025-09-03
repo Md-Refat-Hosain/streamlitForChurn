@@ -28,7 +28,7 @@ with col2:  # middle column
                     GitHub
                 </button>
             </a>
-            <a href="https://www.linkedin.com/in/your-profile/" target="_blank">
+            <a href="https://www.linkedin.com/in/refathosain/" target="_blank">
                 <button style="padding:10px 20px; margin:5px; border-radius:10px; 
                                background:#0077B5; color:white; border:none; cursor:pointer;">
                     LinkedIn
