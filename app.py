@@ -6,7 +6,7 @@ from PIL import Image
 API_URL = "https://fastapi-1sb8.onrender.com/predict"
 
 
-image_path = "/Users/mohd_rifat/Desktop/A11789B1-928B-4E79-A7FA-40D6FE317615.jpg"
+image_path = "Image/A11789B1-928B-4E79-A7FA-40D6FE317615.jpg"
 image = Image.open(image_path)  # Replace with your image path
 
 resized_image = image.resize((120, 120))
