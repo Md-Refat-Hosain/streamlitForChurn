@@ -2,7 +2,10 @@ import streamlit as st
 import requests
 from PIL import Image
 
-image_path = "/Users/mohd_rifat/Desktop/A11789B1-928B-4E79-A7FA-40D6FE317615.jpg"
+API_URL = "https://fastapi-1sb8.onrender.com/predict"
+
+
+image_path = "Image/A11789B1-928B-4E79-A7FA-40D6FE317615.jpg"
 image = Image.open(image_path)  # Replace with your image path
 
 resized_image = image.resize((120, 120))  # 300px wide, 200px high
@@ -19,8 +22,6 @@ with col2:
 with col3:
     st.write("")  # empty space on the right
 
-
-API_URL = "https://fastapi-1sb8.onrender.com/predict"
 
 continuous_cols = ["tenure", "monthlycharges"]
 binary_cols = [
